@@ -1,0 +1,12 @@
+Sub ОдинЛистНаПечать() 
+	
+	On Error Resume Next 
+	
+	ActiveWindow.View = xlPageBreakPreview 
+	
+	With ActiveSheet 
+	.HPageBreaks(1).DragOff Direction:=xlDown, RegionIndex:=1 
+	.VPageBreaks(1).DragOff Direction:=xlToRight, RegionIndex:=1 
+	End With 
+	
+End Sub
